@@ -1,10 +1,9 @@
 from rest_framework.routers import DefaultRouter
 
-from apps.authors.views import AuthorViewSet
-from apps.books.views import BookViewSet
-from apps.users.views import UserViewSet
-from apps.borrowings.views import BorrowRecordViewSet
-
+from backend.apps.authors.views import AuthorViewSet
+from backend.apps.books.views import BookViewSet
+from backend.apps.users.views import UserViewSet
+from backend.apps.borrowings.views import BorrowRecordViewSet
 
 router = DefaultRouter()
 
