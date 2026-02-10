@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "apps.authors",
     "apps.books",
     "apps.borrowings",
+    "django_extensions",
 ]
 
 # Кастомный User model для DRF
