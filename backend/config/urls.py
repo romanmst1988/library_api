@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
@@ -14,4 +14,5 @@ urlpatterns = [
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema')),
     path("api/token/", TokenObtainPairView.as_view()),
     path("api/token/refresh/", TokenRefreshView.as_view()),
+    path('api/', include('backend.api_router')),
 ]
