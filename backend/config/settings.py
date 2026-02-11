@@ -37,7 +37,7 @@ INSTALLED_APPS = [
 ]
 
 # Кастомный User model для DRF
-AUTH_USER_MODEL = 'apps.User'
+AUTH_USER_MODEL = 'users.User'
 
 
 MIDDLEWARE = [
