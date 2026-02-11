@@ -18,7 +18,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = {
+INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -28,16 +28,16 @@ INSTALLED_APPS = {
     # Добавим DRF и DRF Spectacular
     "rest_framework",
     "drf_spectacular",
+    "django_extensions",
     # Добавим приложения
     "apps.users",
     "apps.authors",
     "apps.books",
     "apps.borrowings",
-    "django_extensions",
-}
+]
 
 # Кастомный User model для DRF
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'apps.User'
 
 
 MIDDLEWARE = [
