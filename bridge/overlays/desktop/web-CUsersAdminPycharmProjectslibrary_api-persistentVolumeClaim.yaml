@@ -1,0 +1,9 @@
+#! web-C:\Users\Admin\PycharmProjects\library_api-persistentVolumeClaim.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: web-c--users-admin-pycharmprojects-library-api
+    namespace: library-api
+spec:
+    storageClassName: "hostpath" # see docker/desktop-storage-provisioner
