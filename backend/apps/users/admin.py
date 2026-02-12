@@ -1,5 +1,14 @@
 from django.contrib import admin
 from .models import User
 
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ("id", "username", "email", "role", "is_staff")
+    list_filter = ("role", "is_staff")
+    search_fields = ("username", "email")
+
+
+
 # Register your models here.
-admin.site.register(User)
+# admin.site.register(User)
