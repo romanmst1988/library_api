@@ -1,6 +1,7 @@
 import os
-from dotenv import load_dotenv
 from pathlib import Path
+
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,7 +41,7 @@ INSTALLED_APPS = [
 ]
 
 # Кастомный User model для DRF
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = "users.User"
 
 
 MIDDLEWARE = [
@@ -89,9 +90,9 @@ DATABASES = {
 
 # Проверка пароля
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
 
@@ -100,8 +101,8 @@ REST_FRAMEWORK = {
 
 # Простые OpenAPI settings
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Library API',
-    'VERSION': '1.0.0',
+    "TITLE": "Library API",
+    "VERSION": "1.0.0",
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -137,4 +138,4 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

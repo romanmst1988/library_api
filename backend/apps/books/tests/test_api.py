@@ -1,5 +1,6 @@
 from backend.tests.factories import AuthorFactory
 
+
 def test_create_book(auth_client):
     author = AuthorFactory()
 
@@ -8,7 +9,7 @@ def test_create_book(auth_client):
         "genre": "Sci-Fi",
         "published_year": 2024,
         "available_copies": 2,
-        "authors": [author.id]
+        "authors": [author.id],
     }
 
     response = auth_client.post("/api/books/", data)
