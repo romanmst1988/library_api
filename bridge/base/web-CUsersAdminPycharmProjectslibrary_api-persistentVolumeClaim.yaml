@@ -1,0 +1,18 @@
+#! web-C:\Users\Admin\PycharmProjects\library_api-persistentVolumeClaim.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: web-c--users-admin-pycharmprojects-library-api
+    namespace: library-api
+    labels:
+        com.docker.compose.service: web
+        com.docker.compose.volume: C:\Users\Admin\PycharmProjects\library_api
+spec:
+    accessModes:
+        # TODO would need to check which services use this volume
+        - ReadWriteOnce
+    volumeMode: Filesystem
+    resources:
+        requests:
+            storage: 100Mi
