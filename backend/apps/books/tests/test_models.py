@@ -1,11 +1,11 @@
 import pytest
-from model_bakery import baker
-from apps.books.models import Book
+from tests.factories import BookFactory
+
+pytestmark = pytest.mark.django_db
 
 
-@pytest.mark.django_db
 def test_create_book():
-    book = baker.make(Book)
+    book = BookFactory()
 
-    assert book.id is not None
-    assert str(book) != ""
+    assert book.title is not None
+    assert book.available_copies > 0
