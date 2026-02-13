@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import BorrowRecord
 
 
@@ -14,7 +15,6 @@ class BorrowRecordAdmin(admin.ModelAdmin):
     )
     list_filter = ("borrowed_at", "return_due", "returned_at")
     search_fields = ("user__username", "book__title")
-
 
 
 # Register your models here.

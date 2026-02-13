@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import Book
 
 
@@ -14,7 +15,6 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = ("genre", "published_year")
     search_fields = ("title",)
     filter_horizontal = ("authors",)
-
 
 
 # Register your models here.

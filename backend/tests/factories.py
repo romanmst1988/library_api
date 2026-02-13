@@ -1,8 +1,8 @@
 import factory
-from django.contrib.auth import get_user_model
-from apps.books.models import Book
 from apps.authors.models import Author
+from apps.books.models import Book
 from apps.borrowings.models import BorrowRecord
+from django.contrib.auth import get_user_model
 
 User = get_user_model()
 

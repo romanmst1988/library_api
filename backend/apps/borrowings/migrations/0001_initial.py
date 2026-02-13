@@ -9,18 +9,31 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('books', '0001_initial'),
+        ("books", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='BorrowRecord',
+            name="BorrowRecord",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('borrowed_at', models.DateTimeField(auto_now_add=True)),
-                ('return_due', models.DateField()),
-                ('returned_at', models.DateTimeField(blank=True, null=True)),
-                ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='books.book')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("borrowed_at", models.DateTimeField(auto_now_add=True)),
+                ("return_due", models.DateField()),
+                ("returned_at", models.DateTimeField(blank=True, null=True)),
+                (
+                    "book",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="books.book"
+                    ),
+                ),
             ],
         ),
     ]
